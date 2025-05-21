@@ -1,0 +1,525 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  color: #161723;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* First Section - Product section */
+.product-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.heading {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Features grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  margin-bottom: 2.5rem;
+  text-align: left; /* Reset text alignment for feature content */
+}
+
+.features-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 24px;
+  width: 100%;
+}
+
+.icon-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.green {
+  background-color: #dcf9ca;
+}
+
+.beige {
+  background-color: #f8f0d6;
+}
+
+.teal {
+  background-color: #c8f2e7;
+}
+
+.pink {
+  background-color: #f7cabd;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.feature-title {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+}
+
+.feature-description {
+  font-size: 16px;
+  font-weight: 400;
+  color: #424153;
+  line-height: 150%;
+  min-width: 308px;
+  letter-spacing: 0.5px;
+}
+
+/* Center image */
+.center-image-container {
+  order: -1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.center-image {
+  width: 280px;
+  height: 280px;
+  object-fit: contain;
+}
+
+/* CTA section */
+.cta-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 492px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.cta-button {
+  width: 100%;
+  background-color: #ee6f4b;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 1rem;
+}
+
+.cta-button:hover {
+  background-color: #e05a36;
+}
+
+.guarantee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-size: 0.75rem;
+  color: #424153;
+  margin-bottom: 0.75rem;
+}
+
+.heart-icon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.payment-methods {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-left: 16px;
+}
+
+.payment-icon {
+  height: 1.25rem;
+  object-fit: contain;
+}
+
+/* Second Section - Nutrition section */
+.nutrition-section {
+  background-color: #f8f8f8;
+  padding: 5rem 0;
+  width: 100%;
+}
+
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  height: 100%;
+}
+
+.nutrition-content {
+  order: 2;
+}
+
+.nutrition-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.nutrition-description {
+  color: #424153;
+  margin-bottom: 2rem;
+  font-size: 0.9375rem;
+}
+
+.key-points {
+  margin-bottom: 2rem;
+}
+
+.key-points-heading {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1.23em 0;
+}
+
+.stat-item.with-border {
+  border-bottom: 1px solid #e3e3e8;
+}
+
+.stat-number {
+  color: #ee6f4b;
+  font-weight: 700;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  width: 4rem;
+}
+
+.stat-description {
+  color: #424153;
+  font-size: 0.9375rem;
+}
+
+.nutrition-cta-button {
+  width: 100%;
+  background-color: #ee6f4b;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nutrition-cta-button:hover {
+  background-color: #e05a36;
+}
+
+.nutrition-image-container {
+  order: 1;
+  height: 100%;
+  min-height: 300px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.nutrition-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+/* Third Section - Health section */
+.health-section {
+  background-color: white;
+  padding: 3rem 0;
+  width: 100%;
+}
+
+.health-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.health-grid:last-child {
+  margin-bottom: 0;
+}
+
+.health-content {
+  order: 2;
+}
+
+.health-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.health-description {
+  color: #424153;
+  font-size: 0.9375rem;
+}
+
+.health-image-container {
+  order: 1;
+  height: 300px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.health-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+/* Responsive styles */
+@media (min-width: 640px) {
+  .heading {
+    font-size: 1.875rem;
+    margin-bottom: 3rem;
+  }
+
+  .feature-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-description {
+    font-size: 1rem;
+  }
+
+  .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .center-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .guarantee {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+
+  .heart-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .payment-icon {
+    height: 1.5rem;
+  }
+
+  /* Second section responsive */
+  .nutrition-heading {
+    font-size: 1.875rem;
+  }
+
+  .nutrition-description {
+    font-size: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.875rem;
+  }
+
+  .stat-description {
+    font-size: 1rem;
+  }
+
+  .nutrition-cta-button {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  /* Third section responsive */
+  .health-heading {
+    font-size: 1.875rem;
+  }
+
+  .health-description {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .product-section {
+    padding: 3rem 0;
+  }
+
+  .heading {
+    font-size: 2.25rem;
+    margin-bottom: 4rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .features-column {
+    gap: 4rem;
+    margin-top: 2rem;
+  }
+
+  .center-image-container {
+    order: unset;
+    margin-bottom: 0;
+  }
+
+  .center-image {
+    width: 320px;
+    height: 320px;
+  }
+
+  .cta-section {
+    margin-top: 4rem;
+  }
+
+  /* Second section responsive */
+  .nutrition-section {
+    padding: 4rem 0;
+  }
+
+  .nutrition-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: stretch;
+  }
+
+  .nutrition-content {
+    order: 1;
+  }
+
+  .nutrition-image-container {
+    order: 2;
+  }
+
+  .nutrition-heading {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .nutrition-cta-button {
+    width: auto;
+  }
+
+  /* Third section responsive */
+  .health-section {
+    padding: 4rem 0;
+  }
+
+  .health-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .health-grid .health-content {
+    order: 2;
+  }
+
+  .health-grid .health-image-container {
+    order: 1;
+    height: 100%;
+    min-height: 350px;
+  }
+
+  .health-grid.reverse .health-content {
+    order: 1;
+  }
+
+  .health-grid.reverse .health-image-container {
+    order: 2;
+  }
+
+  .health-heading {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-section {
+    padding: 4rem 0;
+  }
+
+  .features-column {
+    gap: 6rem;
+  }
+
+  .center-image {
+    width: 350px;
+    height: 350px;
+  }
+
+  /* Second section responsive */
+  .nutrition-section {
+    padding: 5rem 0;
+  }
+
+  /* Third section responsive */
+  .health-section {
+    padding: 5rem 0;
+  }
+
+  .health-grid {
+    margin-bottom: 6rem;
+  }
+}
