@@ -6,15 +6,24 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
   line-height: 1.5;
   color: #161723;
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 0.5rem; /* Even smaller padding for 375px screens */
+}
+
+/* Common section wrapper for centering */
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /* First Section - Product section */
@@ -22,51 +31,52 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 0;
-  text-align: center;
+  padding: 1.5rem 0; /* Reduced padding for small screens */
+  text-align: center; /* Ensure all content is center-aligned by default */
 }
 
 .heading {
-  font-size: 40px;
-  font-weight: 600;
+  font-size: 1.125rem; /* Even smaller for 375px screens */
+  font-weight: 700;
   text-align: center;
-  margin-bottom: 2rem;
-  max-width: 32rem;
+  margin-bottom: 1.25rem; /* Reduced margin */
+  max-width: 28rem; /* Slightly smaller max-width */
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.3; /* Tighter line height for better spacing */
 }
 
 /* Features grid */
 .features-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 1rem; /* Reduced gap for small screens */
   width: 100%;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   text-align: left; /* Reset text alignment for feature content */
 }
 
 .features-column {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.5rem; /* Reduced gap for small screens */
 }
 
 .feature {
   display: flex;
   align-items: flex-start;
-  column-gap: 24px;
-  width: 100%;
+  gap: 0.75rem; /* Reduced gap for small screens */
 }
 
 .icon-container {
-  width: 60px;
-  height: 60px;
+  width: 2.5rem; /* Smaller size for very small screens */
+  height: 2.5rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  padding: 0.5rem; /* Reduced padding for small screens */
 }
 
 .green {
@@ -86,25 +96,19 @@ body {
 }
 
 .icon {
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem; /* Smaller size for very small screens */
+  height: 1.5rem;
 }
 
 .feature-title {
-  font-size: 19px;
-  font-weight: 600;
-  margin-bottom: 8px;
-  line-height: 150%;
-  letter-spacing: 0.5px;
+  font-size: 1rem; /* Smaller font size for very small screens */
+  font-weight: 700;
+  margin-bottom: 0.25rem;
 }
 
 .feature-description {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 0.75rem; /* Smaller font size for very small screens */
   color: #424153;
-  line-height: 150%;
-  min-width: 308px;
-  letter-spacing: 0.5px;
 }
 
 /* Center image */
@@ -112,12 +116,12 @@ body {
   order: -1;
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem; /* Reduced margin for small screens */
 }
 
 .center-image {
-  width: 280px;
-  height: 280px;
+  width: 220px; /* Smaller size for very small screens */
+  height: 220px;
   object-fit: contain;
 }
 
@@ -127,10 +131,11 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 492px;
+  max-width: 28rem;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  padding: 0 0.75rem; /* Added padding for small screens */
 }
 
 .cta-button {
@@ -138,13 +143,13 @@ body {
   background-color: #ee6f4b;
   color: white;
   font-weight: 600;
-  font-size: 0.875rem;
-  padding: 0.75rem 1.5rem;
+  font-size: 0.75rem; /* Smaller font size for very small screens */
+  padding: 0.75rem 1rem; /* Adjusted padding for small screens */
   border: none;
   border-radius: 0.375rem;
   cursor: pointer;
   transition: background-color 0.2s;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem; /* Reduced margin for small screens */
 }
 
 .cta-button:hover {
@@ -155,72 +160,88 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 9px;
-  font-size: 0.75rem;
+  gap: 0.25rem; /* Reduced gap for small screens */
+  font-size: 0.7rem; /* Smaller font size for very small screens */
   color: #424153;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem; /* Reduced margin for small screens */
 }
 
 .heart-icon {
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 0.7rem; /* Smaller size for very small screens */
+  height: 0.7rem;
 }
 
 .payment-methods {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  margin-left: 16px;
 }
 
 .payment-icon {
-  height: 1.25rem;
+  height: 1rem; /* Smaller size for very small screens */
   object-fit: contain;
 }
 
 /* Second Section - Nutrition section */
 .nutrition-section {
   background-color: #f8f8f8;
-  padding: 5rem 0;
+  padding: 1.5rem 0; /* Reduced padding for very small screens */
   width: 100%;
 }
 
 .nutrition-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 1rem; /* Reduced gap for very small screens */
   height: 100%;
+  max-width: 100%;
 }
 
 .nutrition-content {
   order: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .nutrition-heading {
-  font-size: 1.5rem;
+  font-size: 1.125rem; /* Smaller font size for very small screens */
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem; /* Reduced margin */
+  text-align: center;
+  line-height: 1.3;
 }
 
 .nutrition-description {
   color: #424153;
-  margin-bottom: 2rem;
-  font-size: 0.9375rem;
+  margin-bottom: 1.25rem; /* Reduced margin */
+  font-size: 0.7rem; /* Smaller font size for very small screens */
+  text-align: center;
+  max-width: 32rem; /* Smaller max-width */
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
 }
 
 .key-points {
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem; /* Reduced margin */
+  width: 100%;
+  max-width: 32rem; /* Smaller max-width */
 }
 
 .key-points-heading {
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem; /* Reduced margin */
+  font-size: 0.8rem; /* Smaller font size */
+  text-align: center;
 }
 
 .stat-item {
   display: flex;
-  gap: 1rem;
-  padding: 1.23em 0;
+  gap: 0.5rem; /* Reduced gap */
+  padding: 0.75rem 0; /* Reduced padding */
+  text-align: left;
 }
 
 .stat-item.with-border {
@@ -230,14 +251,15 @@ body {
 .stat-number {
   color: #ee6f4b;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.125rem; /* Smaller font size */
   flex-shrink: 0;
-  width: 4rem;
+  width: 2.5rem; /* Reduced width */
 }
 
 .stat-description {
   color: #424153;
-  font-size: 0.9375rem;
+  font-size: 0.7rem; /* Smaller font size */
+  line-height: 1.4;
 }
 
 .nutrition-cta-button {
@@ -245,12 +267,13 @@ body {
   background-color: #ee6f4b;
   color: white;
   font-weight: 600;
-  font-size: 0.875rem;
-  padding: 0.75rem 1.5rem;
+  font-size: 0.7rem; /* Smaller font size */
+  padding: 0.625rem 0.75rem; /* Adjusted padding */
   border: none;
   border-radius: 0.375rem;
   cursor: pointer;
   transition: background-color 0.2s;
+  max-width: 32rem; /* Smaller max-width */
 }
 
 .nutrition-cta-button:hover {
@@ -260,7 +283,7 @@ body {
 .nutrition-image-container {
   order: 1;
   height: 100%;
-  min-height: 300px;
+  min-height: 200px; /* Reduced height for very small screens */
   border-radius: 0.5rem;
   overflow: hidden;
   position: relative;
@@ -276,15 +299,16 @@ body {
 /* Third Section - Health section */
 .health-section {
   background-color: white;
-  padding: 3rem 0;
+  padding: 1.5rem 0; /* Reduced padding for very small screens */
   width: 100%;
 }
 
 .health-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-bottom: 4rem;
+  gap: 1rem; /* Reduced gap */
+  margin-bottom: 2rem; /* Reduced margin */
+  max-width: 100%;
 }
 
 .health-grid:last-child {
@@ -293,22 +317,33 @@ body {
 
 .health-content {
   order: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .health-heading {
-  font-size: 1.5rem;
+  font-size: 1.125rem; /* Smaller font size */
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem; /* Reduced margin */
+  text-align: center;
+  line-height: 1.3;
 }
 
 .health-description {
   color: #424153;
-  font-size: 0.9375rem;
+  font-size: 0.7rem; /* Smaller font size */
+  text-align: center;
+  max-width: 32rem; /* Smaller max-width */
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
 }
 
 .health-image-container {
   order: 1;
-  height: 300px;
+  height: 200px; /* Reduced height for very small screens */
   border-radius: 0.5rem;
   overflow: hidden;
 }
@@ -321,10 +356,65 @@ body {
 }
 
 /* Responsive styles */
+@media (min-width: 390px) {
+  .container {
+    padding: 0 0.75rem; /* Slightly increased padding */
+  }
+
+  .heading {
+    font-size: 1.25rem;
+  }
+
+  .nutrition-heading,
+  .health-heading {
+    font-size: 1.25rem;
+  }
+
+  .nutrition-description,
+  .stat-description,
+  .health-description {
+    font-size: 0.75rem;
+  }
+
+  .nutrition-cta-button {
+    font-size: 0.75rem;
+  }
+
+  .nutrition-image-container {
+    min-height: 220px;
+  }
+
+  .health-image-container {
+    height: 220px;
+  }
+}
+
 @media (min-width: 640px) {
+  .container {
+    padding: 0 1rem;
+  }
+
   .heading {
     font-size: 1.875rem;
     margin-bottom: 3rem;
+  }
+
+  .product-section {
+    padding: 2.5rem 0;
+  }
+
+  .features-column {
+    gap: 3rem;
+  }
+
+  .feature {
+    gap: 1rem;
+  }
+
+  .icon-container {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.75rem;
   }
 
   .feature-title {
@@ -346,6 +436,10 @@ body {
     height: 300px;
   }
 
+  .center-image-container {
+    margin-bottom: 2rem;
+  }
+
   .cta-button {
     font-size: 1rem;
     padding: 1rem 2rem;
@@ -355,6 +449,7 @@ body {
   .guarantee {
     font-size: 0.875rem;
     margin-bottom: 1rem;
+    gap: 0.5rem;
   }
 
   .heart-icon {
@@ -367,16 +462,33 @@ body {
   }
 
   /* Second section responsive */
+  .nutrition-section {
+    padding: 3rem 0;
+  }
+
   .nutrition-heading {
     font-size: 1.875rem;
+    margin-bottom: 1rem;
   }
 
   .nutrition-description {
     font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .key-points-heading {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .stat-item {
+    padding: 1.5rem 0;
+    gap: 1rem;
   }
 
   .stat-number {
     font-size: 1.875rem;
+    width: 4rem;
   }
 
   .stat-description {
@@ -388,13 +500,31 @@ body {
     padding: 1rem 2rem;
   }
 
+  .nutrition-image-container {
+    min-height: 300px;
+  }
+
   /* Third section responsive */
+  .health-section {
+    padding: 3rem 0;
+  }
+
+  .health-grid {
+    margin-bottom: 3rem;
+    gap: 2rem;
+  }
+
   .health-heading {
     font-size: 1.875rem;
+    margin-bottom: 1rem;
   }
 
   .health-description {
     font-size: 1rem;
+  }
+
+  .health-image-container {
+    height: 300px;
   }
 }
 
@@ -445,15 +575,25 @@ body {
 
   .nutrition-content {
     order: 1;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .nutrition-heading {
+    text-align: left;
+  }
+
+  .nutrition-description {
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .key-points-heading {
+    text-align: left;
   }
 
   .nutrition-image-container {
     order: 2;
-  }
-
-  .nutrition-heading {
-    font-size: 2.25rem;
-    margin-bottom: 1.5rem;
   }
 
   .nutrition-cta-button {
@@ -469,10 +609,22 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
+    margin-bottom: 4rem;
   }
 
   .health-grid .health-content {
     order: 2;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .health-grid .health-heading {
+    text-align: left;
+  }
+
+  .health-grid .health-description {
+    text-align: left;
+    margin-left: 0;
   }
 
   .health-grid .health-image-container {
@@ -483,15 +635,12 @@ body {
 
   .health-grid.reverse .health-content {
     order: 1;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .health-grid.reverse .health-image-container {
     order: 2;
-  }
-
-  .health-heading {
-    font-size: 2.25rem;
-    margin-bottom: 1.5rem;
   }
 }
 
@@ -521,29 +670,5 @@ body {
 
   .health-grid {
     margin-bottom: 6rem;
-  }
-}
-
-@media (min-width: 390px) {
-  .container {
-    padding: 0 1rem;
-  }
-
-  .heading {
-    font-size: 1.375rem;
-  }
-
-  .feature-description {
-    font-size: 0.8125rem;
-  }
-
-  .cta-button {
-    font-size: 0.8125rem;
-  }
-
-  .nutrition-description,
-  .stat-description,
-  .health-description {
-    font-size: 0.8125rem;
   }
 }
